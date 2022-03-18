@@ -9,6 +9,6 @@ void do_rm() {
         printf("Usage: rm [filename]\n");
     }
     if (remove(filename) != 0) {
-        printf("remove error!");
+        printf("remove error!\n");
     }
 }

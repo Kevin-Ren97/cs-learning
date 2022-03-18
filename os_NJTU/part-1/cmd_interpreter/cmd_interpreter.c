@@ -19,10 +19,8 @@
 #include "rm.h"
 #include "echo.h"
 
-#define MAX_PATH_SIZE 255
 #define MAX_CMD_SIZE 255
 
-char working_dir[MAX_PATH_SIZE];
 char cmd[MAX_CMD_SIZE];
 
 // trim space
@@ -92,7 +90,6 @@ int getcmd_and_running() {
         } else if (strcmp(word, "echo") == 0) {
             do_echo();
         } else {
-            //system(cmd);
             exec_other(cmd);
         }
     }
